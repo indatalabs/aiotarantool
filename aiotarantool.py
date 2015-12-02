@@ -135,7 +135,7 @@ class Connection(tarantool.Connection):
                  encoding=ENCODING_DEFAULT, aiobuffer_size=16384):
         """just create instance, do not really connect by default"""
 
-        super().__init__(host, port,
+        super(Connection, self).__init__(host, port,
                          user=user,
                          password=password,
                          connect_now=connect_now,
